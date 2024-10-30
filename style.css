@@ -23,6 +23,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-block: 25px;
+  overflow: hidden;
   /* height: 60px; */
 }
 
