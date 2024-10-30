@@ -17,9 +17,7 @@ body {
   border: 1px solid blue;
 }
 
-.nav-bar-wrapper {
-  overflow: hidden;
-}
+
 
 .nav-bar {
   width: 100%;
@@ -27,18 +25,19 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-block: 25px;
-  overflow: hidden;
   /* height: 60px; */
 }
 
 .nav-links {
   list-style: none;
   display: flex;
+  text-align: center;
+  justify-content: center;
   align-items: center;
-  gap: 2rem;
 }
 
 .nav-links li a {
+  margin: 0 1rem;
   font-size: 1.1rem;
   color: rgba(251, 253, 255, 0.66);
   text-decoration: none;
@@ -80,10 +79,15 @@ body {
   display: none;
 }
 
+#cross-icon {
+  display: none;
+}
+
 @media (max-width: 500px) {
 
   .nav-bar-wrapper {
     position: relative;
+    /* overflow: hidden; */
     /* flex-direction: column;
     align-items: center; */
   }
@@ -91,15 +95,22 @@ body {
   .nav-links {
     position: absolute;
     top: 0;
-    right: -200px;
+    right: 0;
+    z-index: 9;
     flex-direction: column;
-    gap: 1.1rem;
+    /* gap: 1.1rem; */
     border: 1px solid red;
     padding: 55px 40px 40px 40px;
+    display: none;
   }
 
   .nav-links li a {
     font-size: 0.9rem;
+    margin: 0;
+  }
+
+  .nav-links li {
+    margin-bottom: 1rem;
   }
 
   #ham-icon {
@@ -108,9 +119,23 @@ body {
     color: white;
     top: 25px;
     right: 40px;
+    z-index: 99;
+  }
+
+  #cross-icon {
+    position: absolute;
+    display: none;
+    color: white;
+    top: 25px;
+    right: 40px;
+    z-index: 99;
   }
 
   #ham-icon i {
+    font-size: 1.2rem;
+  }
+
+  #cross-icon i {
     font-size: 1.2rem;
   }
 
